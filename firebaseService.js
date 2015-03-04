@@ -1,7 +1,7 @@
 var app = angular.module('firebaseLogin');
 
 app.service('firebaseService', function ($firebase) {
-  var firebaseUrl = 'https://devlogin.firebaseio.com/';
+  var firebaseUrl = 'https://stevetest1.firebaseio.com/';
 
   this.getUser = function(userId){
     return $firebase(new Firebase(firebaseUrl + 'users/' + userId)).$asObject();

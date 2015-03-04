@@ -2,7 +2,7 @@ var app = angular.module('firebaseLogin');
 
 app.service('authService', function(){
   //Just a reference to the firebase endpoint
-  var firebaseUrl = 'https://practice-auth.firebaseio.com/'
+  var firebaseUrl = 'https://stevetest1.firebaseio.com/'
   //Creates an object using the Firebase Constructor with our endpoint passed in
   var firebaseLogin = new Firebase(firebaseUrl);
 
@@ -36,6 +36,7 @@ app.service('authService', function(){
       email: user.email,
       password: user.password
     }, function(error) {
+        console.log(error)
         if (error) {
           switch (error.code) {
             case "EMAIL_TAKEN":
